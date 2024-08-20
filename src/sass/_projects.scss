@@ -1,0 +1,32 @@
+.projects .container {
+  padding-bottom: 40px;
+}
+
+.projects .projects-heading {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.projects .projects-heading h2 {
+  color: var(--text-black-900);
+  font-weight: 600;
+}
+
+.projects .projects-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  margin-bottom: 30px;
+}
+
+.projects .projects-item-inner {
+  border: 6px solid var(--bg-black-100);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.projects .projects-item-inner .project-img img {
+  width: 100%;
+  display: block;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "web-portfolio-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "sass -w src/sass:src/css",
+    "live": "live-server src --verbose",
+    "dev": "concurrently \"npm run build:css\" \"npm run live\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "live-server": "^1.2.2",
+    "sass": "^1.77.8"
+  }
+}

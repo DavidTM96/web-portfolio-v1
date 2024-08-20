@@ -1,0 +1,130 @@
+.side-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  background: var(--bg-black-100);
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 30px;
+  height: 100%;
+  border-right: 1px solid var(--bg-black-50);
+  z-index: 10;
+}
+
+ul {
+  list-style: none;
+}
+
+.side-menu .logo {
+  position: absolute;
+  top: 50px;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.side-menu .logo a {
+  color: var(--text-black-900);
+  font-weight: 700;
+  padding: 15px 20px;
+  font-size: 30px;
+  letter-spacing: 5px;
+  position: relative;
+}
+
+.side-menu .logo a span {
+  font-family: "Clicker Script", cursive;
+  font-size: 40px;
+}
+
+.side-menu .logo a::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid var(--skin-color);
+  border-left: 5px solid var(--skin-color);
+  bottom: 0;
+  left: 0;
+}
+
+.side-menu .logo a::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid var(--skin-color);
+  border-right: 5px solid var(--skin-color);
+  top: 0;
+  right: 0;
+}
+
+.side-menu .nav-toggler {
+  height: 40px;
+  width: 45px;
+  border: 1px solid var(--bg-black-50);
+  cursor: pointer;
+  position: fixed;
+  left: 300px;
+  top: 20px;
+  border-radius: 5px;
+  background: var(--bg-black-100);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-menu .nav-toggler span {
+  height: 2px;
+  width: 18px;
+  background: var(--skin-color);
+  display: inline-block;
+  position: relative;
+}
+
+.side-menu .nav-toggler span::before {
+  content: "";
+  height: 2px;
+  width: 18px;
+  background: var(--skin-color);
+  position: absolute;
+  top: -6px;
+  left: 0;
+}
+
+.side-menu .nav-toggler span::after {
+  content: "";
+  height: 2px;
+  width: 18px;
+  background: var(--skin-color);
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+
+.side-menu .nav {
+  margin-top: 50px;
+}
+
+.side-menu .nav li {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.side-menu .nav li a {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  border-bottom: 1px solid var(--bg-black-50);
+  color: var(--text-black-900);
+  padding: 5px 15px;
+}
+
+.side-menu .nav li a.active {
+  color: var(--skin-color);
+}
+
+.side-menu .nav li a i {
+  margin-right: 10px;
+}
