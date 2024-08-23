@@ -128,3 +128,11 @@ ul {
 .side-menu .nav li a i {
   margin-right: 10px;
 }
+
+// Responsive
+
+@media only screen and (max-width: 1199px) {
+  .side-menu {
+    left: -270px;
+  }
+}

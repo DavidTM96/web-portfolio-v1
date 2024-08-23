@@ -4,14 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Torrez</title>
+    <!--Icon Retrieved from Favicon.com-->
     <link rel="icon" href="assets/favicon-32x32.png" />
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/main.css" />
-
+    <link rel="stylesheet" href="sass/_color1.scss" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="css/color-1.css"
+      class="alternate-color"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/color-2.css"
+      class="alternate-color"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/color-3.css"
+      class="alternate-color"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/color-4.css"
+      class="alternate-color"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/color-5.css"
+      class="alternate-color"
+      title="color-5"
+      disabled
+    />
+
+    <link rel="stylesheet" href="css/color-switcher.css" />
   </head>
   <body>
     <div class="main-container">
@@ -22,38 +60,39 @@
         <div class="nav-toggler">
           <span></span>
         </div>
-        <ul class="nav">
+        <ul class="nav" id="nav-list">
           <li>
-            <a href="#" class="active"><i class="fa fa-home"></i> Home</a>
+            <a href="#home" class="active"><i class="fa fa-home"></i> Home</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-user"></i> About</a>
+            <a href="#about"><i class="fa fa-user"></i> About</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-briefcase"></i> Projects</a>
+            <a href="#projects"><i class="fa fa-briefcase"></i> Projects</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-list"></i> Skills</a>
+            <a href="#skills"><i class="fa fa-list"></i> Skills</a>
           </li>
           <!--  <li>
             <a href="#"><i class="fa fa-list"></i> Experience</a>
           </li> -->
           <li>
-            <a href="#"><i class="fa fa-comments"></i> Contact</a>
+            <a href="#contact"><i class="fa fa-comments"></i> Contact</a>
           </li>
         </ul>
       </div>
       <div class="main-content">
         <!-- Home Section -->
-        <section class="home section">
+        <section class="home section" id="home">
           <div class="container">
             <div class="row">
               <div class="home-info padd-15">
                 <h3 class="hello">
                   Hello, my name is <span class="name">David Torrez</span>
                 </h3>
+                <h3 class="my-profession">I'm a</h3>
                 <h3 class="my-profession">
-                  I'm a <span class="typing">web developer</span>
+                  <span class="typing"></span>
                 </h3>
                 <p>
                   I'm a Web Development student at CICCC (Cornerstone
@@ -61,16 +100,16 @@
                   build exceptional websites, applying the latest technologies
                   and best practices.
                 </p>
-                <a href="#contact" class="btn hire-me">Hire Me</a>
+                <a href="#contact" class="btn hire-me">Available to work</a>
               </div>
               <div class="home-img padd-15">
-                <img src="assets/profile.jpg" alt="" />
+                <img src="assets/profile.png" alt="" />
               </div>
             </div>
           </div>
         </section>
         <!-- About Section -->
-        <section class="about section">
+        <section class="about section" id="about">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -110,10 +149,16 @@
                     </p>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="buttons padd-15">
-                    <a href="#" class="btn resume">Resume</a>
-                    <a href="#contact" class="btn hire-me">Hire Me</a>
+                <div class="row resume-hire-box">
+                  <div class="buttons padd-15 buttons-box">
+                    <a
+                      href="assets/resume.pdf"
+                      class="btn resume"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Resume</a
+                    >
+                    <!-- <a href="#contact" class="btn hire-me">Hire Me</a> -->
                   </div>
                 </div>
               </div>
@@ -121,7 +166,7 @@
           </div>
         </section>
         <!-- Projects Section -->
-        <section class="projects section">
+        <section class="projects section" id="projects">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -133,7 +178,31 @@
                 <h2>Some of my projects :</h2>
               </div>
             </div>
-            <div class="row">
+            <div class="row projects-list">
+              <div class="projects-item padd-15">
+                <div class="projects-item-inner shadow-dark">
+                  <div class="project-img">
+                    <img src="assets/facebook-mockup.png" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="projects-item padd-15">
+                <div class="projects-item-inner shadow-dark">
+                  <div class="project-img">
+                    <img src="assets/facebook-mockup.png" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="projects-item padd-15">
+                <div class="projects-item-inner shadow-dark">
+                  <div class="project-img">
+                    <img src="assets/facebook-mockup.png" alt="" />
+                  </div>
+                </div>
+              </div>
+
               <div class="projects-item padd-15">
                 <div class="projects-item-inner shadow-dark">
                   <div class="project-img">
@@ -145,7 +214,7 @@
           </div>
         </section>
         <!-- Contact Section -->
-        <section class="contact section">
+        <section class="contact section" id="contact">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -172,7 +241,30 @@
         </section>
       </div>
     </div>
+    <!-- Color switcher -->
+    <div class="color-switcher">
+      <div class="color-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="fas"></i>
+      </div>
+      <h4>Theme Colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveColor('color-1')"></span>
+        <span class="color-2" onclick="setActiveColor('color-2')"></span>
+        <span class="color-3" onclick="setActiveColor('color-3')"></span>
+        <span class="color-4" onclick="setActiveColor('color-4')"></span>
+        <span class="color-5" onclick="setActiveColor('color-5')"></span>
+      </div>
+    </div>
     <!-- JS Files -->
-    <script src="script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+      integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -60,9 +60,13 @@ textarea {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  width: 95%;
+  margin: 0 auto;
+  transition: all 0.3s ease;
 }
 
 .contact-form button[type="submit"]:hover {
-  background-color: var(--text-black-900);
+  //background-color: var(--text-black-900);
+  transform: scale(1.05);
   transition: 0.3s ease-in-out;
 }
