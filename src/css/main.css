@@ -509,6 +509,45 @@ h3.my-profession {
     max-width: 100%;
   }
 }
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
+
+.skills-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.skills-list li:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--skin-color);
+}
+
+body.dark .skills-list li {
+  background-color: #222222;
+}
+
+.skill-icon {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .skills-list {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
 .contact-title {
   color: var(--skin-color);
   text-align: center;

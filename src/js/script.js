@@ -49,7 +49,6 @@ var typed = new Typed(".typing", {
 });
 
 // Adding active class to the clicked nav item
-
 const navItems = document.querySelectorAll("#nav-list li a");
 
 navItems.forEach((item) => {
