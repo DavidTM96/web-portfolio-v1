@@ -16,6 +16,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1.5;
   font-size: 16px;
@@ -262,7 +266,7 @@ h3.my-profession {
 .home-info p {
   margin-bottom: 70px;
   font-size: 20px;
-  color: var(--text-black-700);
+  color: var(--text-black-900);
   font-weight: 600;
 }
 
@@ -414,7 +418,7 @@ h3.my-profession {
 .about .about-content .about-text p {
   font-size: 20px;
   line-height: 25px;
-  color: var(--text-black-700);
+  color: var(--text-black-900);
   font-weight: 600;
 }
 
@@ -678,6 +682,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .color-switcher .colors span {

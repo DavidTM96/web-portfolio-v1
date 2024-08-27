@@ -41,19 +41,55 @@ window.addEventListener("load", () => {
 });
 
 // Typing animation
-var typed = new Typed(".typing", {
+const typed = new Typed(".typing", {
   strings: ["Web Developer", "Web Designer", "Freelancer"],
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,
 });
 
-// Adding active class to the clicked nav item
-const navItems = document.querySelectorAll("#nav-list li a");
+// Logic to add active class to the clicked nav item
+const handleNavItemClick = (event) => {
+  disableObserver = true;
+  navItems.forEach((nav) => nav.classList.remove("active"));
+  event.currentTarget.classList.add("active");
 
+  setTimeout(() => {
+    disableObserver = false;
+  }, 1000);
+};
+
+const navItems = document.querySelectorAll("#nav-list li a");
 navItems.forEach((item) => {
-  item.addEventListener("click", function () {
-    navItems.forEach((nav) => nav.classList.remove("active"));
-    this.classList.add("active");
-  });
+  item.addEventListener("click", handleNavItemClick);
 });
+
+// Function to handle section intersection
+const handleIntersection = (entries) => {
+  if (disableObserver) return;
+
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const targetId = entry.target.getAttribute("id");
+      navItems.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").substring(1) === targetId) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+};
+
+// Adding active class to the nav item when scrolling into view
+const sections = document.querySelectorAll(".section");
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.7, // 70% of the section is visible
+};
+
+// Disable the observer temporarily when a nav item is clicked
+let disableObserver = false;
+const observer = new IntersectionObserver(handleIntersection, observerOptions);
+sections.forEach((section) => observer.observe(section));
