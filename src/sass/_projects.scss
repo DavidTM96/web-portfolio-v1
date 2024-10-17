@@ -20,15 +20,48 @@
 }
 
 .projects .projects-item-inner {
-  border: 6px solid var(--bg-black-100);
+  //border: 6px solid var(--bg-black-100);
+  //border: 1px solid var(--skin-color);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.github-demo-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.project-button {
+  background-color: var(--skin-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
 }
 
 .projects .projects-item-inner .project-img img {
   width: 100%;
   display: block;
+}
+
+.project-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-title {
+  color: var(--text-black-900);
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 10px;
 }
 
 // Responsive
