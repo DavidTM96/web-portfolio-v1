@@ -542,6 +542,10 @@ h3.my-profession {
   padding: 10px;
 }
 
+body.dark .projects-item-inner {
+  background-color: #222222;
+}
+
 @media only screen and (max-width: 991px) {
   .projects-list .projects-item {
     flex: 0 0 50%;

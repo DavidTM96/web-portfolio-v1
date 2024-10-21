@@ -64,6 +64,10 @@
   padding: 10px;
 }
 
+body.dark .projects-item-inner {
+  background-color: #222222;
+}
+
 // Responsive
 @media only screen and (max-width: 991px) {
   .projects-list .projects-item {
