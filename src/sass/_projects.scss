@@ -20,12 +20,9 @@
 }
 
 .projects .projects-item-inner {
-  //border: 6px solid var(--bg-black-100);
-  //border: 1px solid var(--skin-color);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
   overflow: hidden;
-  cursor: pointer;
   text-align: center;
   padding-bottom: 10px;
 }
@@ -42,6 +39,13 @@
   border-radius: 10px;
   color: white;
   font-weight: 600;
+  &:hover {
+    border: 1px solid var(--skin-color);
+    background-color: transparent;
+    color: var(--skin-color);
+    box-shadow: inset 2px 2px 5px var(--skin-color);
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 .projects .projects-item-inner .project-img img {
