@@ -39,12 +39,12 @@
   border-radius: 10px;
   color: white;
   font-weight: 600;
+  transition: all 0.3s ease-in-out;
   &:hover {
     border: 1px solid var(--skin-color);
     background-color: transparent;
     color: var(--skin-color);
     box-shadow: inset 2px 2px 5px var(--skin-color);
-    transition: all 0.3s ease-in-out;
   }
 }
 
