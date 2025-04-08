@@ -43,6 +43,28 @@ body.dark {
   opacity: 1;
 }
 
+.section-title {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-in-out;
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-subtitle {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s ease-in-out;
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .main-content {
   padding-left: 270px;
 }

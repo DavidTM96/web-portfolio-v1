@@ -70,3 +70,14 @@ textarea {
   transform: scale(1.05);
   transition: 0.3s ease-in-out;
 }
+
+.contact-form {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-in-out;
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -89,6 +89,22 @@ const observerOptions = {
   threshold: 0.7, // 70% of the section is visible
 };
 
+const animatedElements = document.querySelectorAll(
+  ".section-title, .section-subtitle, .about-description, .btn resume, .project-1, .project-2, .skills-list, .contact-form"
+);
+
+const animationObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate"); // Add animation class
+      observer.unobserve(entry.target); // Stop observing after animation
+    }
+  });
+}, observerOptions);
+
+// Observe each animated element
+animatedElements.forEach((element) => animationObserver.observe(element));
+
 // Disable the observer temporarily when a nav item is clicked
 let disableObserver = false;
 const observer = new IntersectionObserver(handleIntersection, observerOptions);

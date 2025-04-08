@@ -33,6 +33,17 @@ body.dark .skills-list li {
   border-radius: 10px;
 }
 
+.skills-list {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.5s ease-in-out;
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 // Responsive design
 @media only screen and (max-width: 600px) {
   .skills-list {
