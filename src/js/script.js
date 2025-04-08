@@ -86,7 +86,7 @@ const sections = document.querySelectorAll(".section");
 const observerOptions = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.7, // 70% of the section is visible
+  threshold: 0.3, // 30% of the section is visible
 };
 
 const animatedElements = document.querySelectorAll(
