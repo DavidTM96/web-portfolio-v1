@@ -90,7 +90,7 @@ const observerOptions = {
 };
 
 const animatedElements = document.querySelectorAll(
-  ".section-title, .section-subtitle, .about-description, .btn resume, .project-1, .project-2, .skills-list, .contact-form"
+  ".section-title, .section-subtitle, .about-description, .btn resume, .project-1, .project-2, .project-3, .skills-list, .contact-form"
 );
 
 const animationObserver = new IntersectionObserver((entries, observer) => {
