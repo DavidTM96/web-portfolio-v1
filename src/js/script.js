@@ -42,7 +42,7 @@ window.addEventListener("load", () => {
 
 // Typing animation
 const typed = new Typed(".typing", {
-  strings: ["Web Developer", "Web Designer", "Freelancer"],
+  strings: ["Web Developer", "Front-End Developer", "Full-Stack Developer"],
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,
